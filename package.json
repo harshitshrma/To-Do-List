@@ -1,0 +1,22 @@
+{
+  "name": "To-Do-List",
+  "version": "1.0.0",
+  "description": "It's a simple to do list app for managing and organizing your daily tasks.",
+  "main": "app.js",
+  "scripts": {
+    "start": "node app.js",
+    "client": "npm run start --prefix client",
+    "server": "nodemon app.js",
+    "dev": "concurrently \"npm run client\" \"npm run server\"",
+    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix client && npm run build --prefix client"
+  },
+  "author": "harshit",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "concurrently": "^6.0.1",
+    "ejs": "^2.6.1",
+    "express": "^4.16.4",
+    "mongoose": "^5.12.3"
+  }
+}
